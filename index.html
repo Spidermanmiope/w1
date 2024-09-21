@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Flower</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <audio id="musica1">
+        <source src="Flores Amarillas2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="flower">
+        <div class="text-above">---Feliz 21 De Setiembre ❤---</div>
+        <div class="mid"></div>
+        <div class="Petal1 p1"></div>
+        <div class="Petal1 p2"></div>
+        <div class="Petal1 p3"></div>
+        <div class="Petal1 p4"></div>
+        <div class="Petal2 p1"></div>
+        <div class="Petal2 p2"></div>
+        <div class="Petal2 p3"></div>
+        <div class="Petal2 p4"></div>
+        <div class="Petal3 p1"></div>
+        <div class="Petal3 p2"></div>
+        <div class="Petal3 p3"></div>
+        <div class="Petal3 p4"></div>
+        <div class="text-below">Para ti Dolcheto<3</div>
+    </div>
+
+    <script>
+        function PlayAudio() {
+            var audio = document.getElementById("musica1");
+            audio.play().catch(function(error) {
+                console.log("Playback prevented: " + error);
+            });
+        }
+
+        // Add an event listener to the flower element
+        var flower = document.querySelector(".flower");
+        flower.addEventListener("click", PlayAudio);
+    </script>
+</body>
+</html>
